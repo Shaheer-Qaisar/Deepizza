@@ -23,7 +23,7 @@ function renderTimeline(status) {
 }
 
 async function lookupOrder(id) {
-  const res = await fetch(`/api/orders?key=deepizza-demo`);
+  const res = await fetch("/api/orders");
   if (!res.ok) throw new Error("Could not load orders");
   const orders = await res.json();
   return orders.find((o) => o.id.toLowerCase() === id.toLowerCase());

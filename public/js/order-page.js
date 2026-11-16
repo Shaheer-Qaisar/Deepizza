@@ -9,7 +9,7 @@ function renderCart() {
   if (!listEl) return;
 
   if (!cart.length) {
-    listEl.innerHTML = `<p class="empty-cart">Your cart is empty. <a href="menu.html">Browse the menu</a></p>`;
+    listEl.innerHTML = `<p class="empty-cart">Your cart is empty. <a href="products.html">Browse products</a></p>`;
     subtotalEl.textContent = "Rs 0";
     deliveryEl.textContent = "Rs 0";
     grandEl.textContent = "Rs 0";
@@ -25,7 +25,7 @@ function renderCart() {
     <li>
       <div>
         <strong>${line.name}</strong>
-        <div class="line-meta">${MENU[line.category]?.title || line.category} · ${line.sizeLabel}</div>
+        <div class="line-meta">${typeof getCategoryLabel === "function" ? getCategoryLabel(line.category, MENU[line.category] ? line.category : null) : line.category} · ${line.sizeLabel}</div>
         <div class="line-meta">Rs ${line.unitPrice} each</div>
       </div>
       <div>

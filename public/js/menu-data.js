@@ -102,6 +102,12 @@ const DELIVERY_FEE = 199;
 const STORE = {
   name: "DEEPIZZA",
   address: "14-G Central Park",
+  addressFull: "14-G / 14-B, Central Park Housing Scheme",
   phone: "0371-5013651",
+  deliveryPhone: "0371-6513851",
   handle: "@deepizza.official",
+  instagram: "https://www.instagram.com/deepizza.official/",
+  facebook:
+    "https://www.facebook.com/people/Deepizza/61589505623336/?locale=zh_HK#",
+  tagline: "Highly stuffed pizza, burgers & more — fresh from Central Park.",
 };

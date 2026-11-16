@@ -16,17 +16,34 @@
           <span class="hero-badge">Highly stuffed · Central Park</span>
           <h1>Pizza so loaded, the cheese has its own zip code.</h1>
           <p class="lead">
-            Deep dish legends, crown-crust stuffers, and premium doubles — fresh from
-            <strong>14-G Central Park</strong>. Order online for delivery or pickup.
+            Deep dish, stuffers, burgers &amp; drinks — from
+            <strong>14-G Central Park</strong>. New drops &amp; deals live on
+            <a href="https://www.instagram.com/deepizza.official/" target="_blank" rel="noopener">@deepizza.official</a>.
           </p>
           <div class="btn-row">
-            <a class="btn btn-primary" href="menu.html">Order now</a>
+            <a class="btn btn-primary" href="products.html">Order now</a>
             <a class="btn btn-secondary" href="about.html">Our story</a>
           </div>
         </div>
         <div class="hero-visual reveal reveal-delay-2">
-          <img src="assets/menu-hero.png" alt="DEEPIZZA menu — Creamzilla, stuffers, and premium pizzas" width="520" height="520" />
+          <img src="assets/menu-hero.png" alt="DEEPIZZA menu" width="520" height="520" />
         </div>
+      </section>
+
+      <section id="deals" class="home-section reveal">
+        <div class="section-title">
+          <h2>Current deals</h2>
+          <p>Pulled from our latest Instagram posts — Chickiza, Crown Crust, Spin Rolls &amp; more.</p>
+        </div>
+        <div id="deals-slider" class="slider-host"></div>
+      </section>
+
+      <section id="bestsellers" class="home-section reveal">
+        <div class="section-title">
+          <h2>Best sellers</h2>
+          <p>Customer favorites from the stuffed pizza lineup.</p>
+        </div>
+        <div id="bestsellers-slider" class="slider-host"></div>
       </section>
 
       <div class="section-title reveal">
@@ -37,28 +54,41 @@
       <div class="feature-grid">
         <article class="card reveal">
           <h3>Deep Dish</h3>
-          <p>7″ & 10″ pans packed with creamy, meaty, and zingy house favorites.</p>
+          <p>7″ &amp; 10″ pans packed with creamy, meaty, and zingy house favorites.</p>
         </article>
         <article class="card reveal reveal-delay-1">
           <h3>Stuffers</h3>
           <p>Cheese-lined crusts, kebab fillings, and crown crust pockets.</p>
         </article>
         <article class="card reveal reveal-delay-2">
-          <h3>Premium</h3>
-          <p>Smoky, malai boti, and extreme tikka with double-layer cheese.</p>
+          <h3>Burgers &amp; more</h3>
+          <p>Smash burgers, drinks, and IG-featured sides — full catalog on Products.</p>
         </article>
       </div>
+
+      <section id="team" class="home-section reveal">
+        <div class="section-title">
+          <h2>Meet the team</h2>
+          <p>The people behind every overloaded box from Central Park.</p>
+        </div>
+        <div id="team-slider" class="slider-host"></div>
+      </section>
+
+      <section id="reviews" class="home-section reveal">
+        <div class="section-title">
+          <h2>Customer reviews</h2>
+          <p>What our guests say — more on Instagram &amp; Facebook.</p>
+        </div>
+        <div id="reviews-slider" class="slider-host"></div>
+      </section>
     </main>
     <footer class="site-footer" data-site-footer></footer>
     <script src="js/menu-data.js"></script>
+    <script src="js/site-content.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/layout.js"></script>
     <script src="js/scroll-reveal.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        renderNav("index.html");
-        renderFooter();
-      });
-    </script>
+    <script src="js/slider.js"></script>
+    <script src="js/home-page.js"></script>
   </body>
 </html>

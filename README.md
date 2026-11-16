@@ -16,11 +16,13 @@ Open [http://localhost:3000](http://localhost:3000).
 | Page | Purpose |
 |------|---------|
 | Home | Branding, hero, highlights |
-| Menu | Full menu from Deep Dish / Stuffers / Premium |
+| Products | Pizza, burgers, drinks, sides — category cards + reviews |
+| Pizza menu | Deep Dish / Stuffers / Premium focus |
+| Home | Deal slider (from Instagram), best sellers, team, reviews |
 | Order | Cart, customer details, payment, place order |
 | Track Delivery | Order ID timeline (syncs with admin status) |
 | About | Central Park location & contact |
-| Admin | Incoming orders (demo password: `deepizza-demo`) |
+| Admin | Open dashboard — incoming, pending & completed orders |
 
 Orders are stored in `data/orders.json` on the server.
 

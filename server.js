@@ -55,19 +55,11 @@ app.post("/api/orders", (req, res) => {
   res.status(201).json({ success: true, order });
 });
 
-app.get("/api/orders", (req, res) => {
-  const key = req.query.key;
-  if (key !== "deepizza-demo") {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
+app.get("/api/orders", (_req, res) => {
   res.json(readOrders());
 });
 
 app.patch("/api/orders/:id", (req, res) => {
-  const key = req.query.key;
-  if (key !== "deepizza-demo") {
-    return res.status(401).json({ error: "Unauthorized" });
-  }
   const orders = readOrders();
   const idx = orders.findIndex((o) => o.id === req.params.id);
   if (idx === -1) return res.status(404).json({ error: "Order not found" });

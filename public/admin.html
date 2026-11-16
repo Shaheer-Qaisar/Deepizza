@@ -11,26 +11,32 @@
       <nav class="site-nav" data-site-nav></nav>
     </header>
     <main>
-      <section id="admin-login" class="admin-login card reveal">
-        <h2 style="margin-top: 0; color: var(--purple-deep)">Admin login (demo)</h2>
-        <p class="line-meta">Password: <code>deepizza-demo</code></p>
-        <form id="admin-login-form">
-          <div class="form-group">
-            <label for="admin-pass">Access key</label>
-            <input id="admin-pass" type="password" required autocomplete="current-password" />
-          </div>
-          <p id="login-error" style="color: #a33" hidden>Incorrect key.</p>
-          <button type="submit" class="btn btn-primary btn-block">Enter dashboard</button>
-        </form>
-      </section>
-
-      <section id="admin-dashboard" hidden>
+      <section id="admin-dashboard">
         <div class="admin-header reveal">
           <div>
             <h1 style="margin: 0; color: var(--purple-deep); font-size: 1.5rem">Order dashboard</h1>
-            <p class="line-meta">Live orders with customer name, contact, items, and payment.</p>
+            <p class="line-meta">Incoming, pending delivery, and completed orders — updates every 8s.</p>
           </div>
           <button type="button" class="btn btn-secondary" id="refresh-orders">Refresh</button>
+        </div>
+
+        <div class="admin-stats reveal">
+          <button type="button" class="stat-card active" data-admin-tab="all">
+            <span class="stat-num" data-stat="all">0</span>
+            <span class="stat-label">All orders</span>
+          </button>
+          <button type="button" class="stat-card" data-admin-tab="incoming">
+            <span class="stat-num" data-stat="incoming">0</span>
+            <span class="stat-label">Incoming</span>
+          </button>
+          <button type="button" class="stat-card" data-admin-tab="pending">
+            <span class="stat-num" data-stat="pending">0</span>
+            <span class="stat-label">Pending</span>
+          </button>
+          <button type="button" class="stat-card" data-admin-tab="completed">
+            <span class="stat-num" data-stat="completed">0</span>
+            <span class="stat-label">Completed</span>
+          </button>
         </div>
 
         <p id="orders-empty" class="empty-cart reveal" hidden>No orders yet — place one from the Order page.</p>
@@ -55,9 +61,13 @@
     </main>
     <footer class="site-footer" data-site-footer></footer>
     <script src="js/menu-data.js"></script>
+    <script src="js/site-content.js"></script>
     <script src="js/cart.js"></script>
     <script src="js/layout.js"></script>
     <script src="js/scroll-reveal.js"></script>
     <script src="js/admin.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", initScrollReveal);
+    </script>
   </body>
 </html>
