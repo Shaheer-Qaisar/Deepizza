@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Track Delivery — DEEPIZZA</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" data-site-nav></nav>
+    </header>
+    <main>
+      <form id="track-form" class="track-form card reveal">
+        <h2 style="margin-top: 0; color: var(--purple-deep)">Track your order</h2>
+        <div class="form-group">
+          <label for="track-id">Order ID</label>
+          <input id="track-id" type="text" placeholder="e.g. DP-..." required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Track</button>
+        <p id="track-error" class="line-meta" style="color: #a33" hidden></p>
+      </form>
+
+      <div id="track-result" hidden>
+        <div class="section-title reveal">
+          <h2 id="track-order-id"></h2>
+          <p><strong id="track-customer"></strong> · <span id="track-address"></span></p>
+        </div>
+        <div id="status-timeline" class="status-timeline"></div>
+        <p class="section-title reveal">
+          <small>Status updates when the admin changes your order on the dashboard.</small>
+        </p>
+      </div>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="js/menu-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/delivery-page.js"></script>
+  </body>
+</html>

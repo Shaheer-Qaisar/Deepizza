@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Order — DEEPIZZA</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" data-site-nav></nav>
+    </header>
+    <main>
+      <div class="section-title reveal">
+        <h2>Your order</h2>
+        <p>Review your cart and send it straight to the kitchen dashboard.</p>
+      </div>
+
+      <div id="order-success" class="order-success reveal" hidden>
+        <h2>Order placed!</h2>
+        <p>Your order ID is <strong id="success-order-id"></strong>.</p>
+        <p>Track delivery status on the next page.</p>
+        <div class="btn-row" style="justify-content: center; margin-top: 1rem">
+          <a class="btn btn-primary" href="delivery.html">Track delivery</a>
+          <a class="btn btn-secondary" href="menu.html">Order more</a>
+        </div>
+      </div>
+
+      <div id="order-panel" class="order-layout">
+        <section class="card reveal">
+          <h3>Cart</h3>
+          <div id="cart-lines"></div>
+          <p>Subtotal: <span id="cart-subtotal">Rs 0</span></p>
+          <p>Delivery fee: <span id="delivery-fee">Rs 0</span></p>
+          <p class="cart-total">Total: <span id="cart-grand">Rs 0</span></p>
+        </section>
+
+        <section class="card reveal reveal-delay-1">
+          <h3>Details & payment</h3>
+          <form id="checkout-form">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="contact">Contact (phone)</label>
+              <input id="contact" name="contact" type="tel" required placeholder="03XX-XXXXXXX" />
+            </div>
+
+            <div class="form-group">
+              <span class="label">Fulfillment</span>
+              <div class="radio-group">
+                <label><input type="radio" name="fulfillment" value="delivery" checked /> Home delivery (+ Rs 199)</label>
+                <label><input type="radio" name="fulfillment" value="pickup" /> Pickup at Central Park</label>
+              </div>
+            </div>
+
+            <div class="form-group" id="address-group">
+              <label for="address">Delivery address</label>
+              <textarea id="address" name="address" placeholder="Street, building, landmark…"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="payment">Payment method</label>
+              <select id="payment" name="payment" required>
+                <option value="Cash on delivery">Cash on delivery</option>
+                <option value="Card on delivery">Card on delivery</option>
+                <option value="Online transfer">Online transfer (demo)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="notes">Notes (optional)</label>
+              <textarea id="notes" name="notes" placeholder="Extra napkins, gate code…"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="submit-order" disabled>
+              Place order
+            </button>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="js/menu-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/order-page.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", initScrollReveal);
+    </script>
+  </body>
+</html>

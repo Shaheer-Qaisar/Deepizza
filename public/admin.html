@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin — DEEPIZZA</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" data-site-nav></nav>
+    </header>
+    <main>
+      <section id="admin-login" class="admin-login card reveal">
+        <h2 style="margin-top: 0; color: var(--purple-deep)">Admin login (demo)</h2>
+        <p class="line-meta">Password: <code>deepizza-demo</code></p>
+        <form id="admin-login-form">
+          <div class="form-group">
+            <label for="admin-pass">Access key</label>
+            <input id="admin-pass" type="password" required autocomplete="current-password" />
+          </div>
+          <p id="login-error" style="color: #a33" hidden>Incorrect key.</p>
+          <button type="submit" class="btn btn-primary btn-block">Enter dashboard</button>
+        </form>
+      </section>
+
+      <section id="admin-dashboard" hidden>
+        <div class="admin-header reveal">
+          <div>
+            <h1 style="margin: 0; color: var(--purple-deep); font-size: 1.5rem">Order dashboard</h1>
+            <p class="line-meta">Live orders with customer name, contact, items, and payment.</p>
+          </div>
+          <button type="button" class="btn btn-secondary" id="refresh-orders">Refresh</button>
+        </div>
+
+        <p id="orders-empty" class="empty-cart reveal" hidden>No orders yet — place one from the Order page.</p>
+
+        <div class="orders-table-wrap reveal">
+          <table class="orders-table">
+            <thead>
+              <tr>
+                <th>Order</th>
+                <th>Customer</th>
+                <th>Items</th>
+                <th>Payment</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Update</th>
+              </tr>
+            </thead>
+            <tbody id="orders-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="js/menu-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

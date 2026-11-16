@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — DEEPIZZA</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-nav" data-site-nav></nav>
+    </header>
+    <main>
+      <section class="about-hero reveal">
+        <span class="hero-badge">About us</span>
+        <h1 style="color: var(--purple-deep); margin: 0.5rem 0 1rem">Born at Central Park</h1>
+        <p class="lead" style="max-width: 640px; margin: 0 auto">
+          DEEPIZZA is your neighborhood spot for <strong>highly stuffed</strong> fast food — with
+          pizza at the heart of every order. We load every crust with house sauces, double cheese,
+          and generous toppings so every slice feels like the menu poster.
+        </p>
+      </section>
+
+      <div class="about-grid">
+        <article class="card reveal">
+          <h3>Location</h3>
+          <p>
+            Find us at <strong>14-G Central Park</strong> — easy to spot, hard to leave hungry.
+            Dine in, grab pickup, or order delivery straight from this site (demo).
+          </p>
+        </article>
+        <article class="card reveal reveal-delay-1">
+          <h3>Hours (demo)</h3>
+          <p>Monday – Sunday: 12:00 PM – 1:00 AM<br />Kitchen stays hot; stuffing never stops.</p>
+        </article>
+        <article class="card reveal reveal-delay-2">
+          <h3>Contact</h3>
+          <p>
+            Phone: <a href="tel:03715013651">0371-5013651</a><br />
+            Instagram: <strong>@deepizza.official</strong>
+          </p>
+        </article>
+      </div>
+
+      <div class="about-map-placeholder reveal" style="margin-top: 2rem">
+        <div>
+          📍 Central Park<br />
+          <span style="font-weight: 500; font-size: 0.95rem">14-G Central Park — your stuffed pizza HQ</span>
+        </div>
+      </div>
+
+      <div class="section-title reveal">
+        <a class="btn btn-primary" href="menu.html">See the menu</a>
+      </div>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="js/menu-data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/scroll-reveal.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        renderNav("about.html");
+        renderFooter();
+        initScrollReveal();
+      });
+    </script>
+  </body>
+</html>
